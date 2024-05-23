@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BiDna } from 'react-icons/bi';
-import Chart from '../ant/Chart';
+import Chart from '../Chart';
 import CalculateButton from './CalculateButton';
 import geneticAlgorithm from './algorithm';
 import GeneParams from './GeneParams';

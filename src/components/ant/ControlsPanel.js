@@ -1,19 +1,9 @@
 import React from 'react';
-import PlayButton from './PlayButton';
-import StopButton from './StopButton';
-import Chart from './Chart.js';
+import Chart from '../Chart.js';
 
-const ControlsPanel = ({
-  onPlayClick,
-  onStopClick,
-  distances,
-  generations,
-  isPlaying,
-}) => {
+const ControlsPanel = ({ distances, generations }) => {
   return (
     <div>
-      {/* <PlayButton onPlayClick={onPlayClick} />
-      <StopButton onStopClick={onStopClick} disabled={isPlaying} /> */}
       <div className='chartContainer'>
         <Chart
           distances={distances}

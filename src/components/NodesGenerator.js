@@ -27,6 +27,7 @@ const NodeGenerator = ({ onNodesGenerated }) => {
     console.log(newNodes);
     setNodes(newNodes);
     onNodesGenerated(newNodes);
+    // eslint-disable-next-line
   }, [canvasSize, onNodesGenerated]);
 
   return (
