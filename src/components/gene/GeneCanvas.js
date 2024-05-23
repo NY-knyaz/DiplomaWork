@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BiDna } from 'react-icons/bi';
 import Chart from '../Chart';
-import CalculateButton from './CalculateButton';
+import CalculateButton from '../CalculateButton';
 import geneticAlgorithm from './algorithm';
 import GeneParams from './GeneParams';
 import Canvas from '../../aco/canvas';

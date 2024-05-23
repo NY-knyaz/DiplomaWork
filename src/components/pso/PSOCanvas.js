@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { SiSwarm } from 'react-icons/si';
 import Chart from '../Chart';
-import CalculateButton from '../gene/CalculateButton';
+import CalculateButton from '../CalculateButton';
 import runPSO from './algorithm';
 import Canvas from '../../aco/canvas';
 import PSOParams from './PSOParams';
