@@ -24,7 +24,6 @@ const NodeGenerator = ({ onNodesGenerated }) => {
       newNodes.push(newNode);
     }
 
-    console.log(newNodes);
     setNodes(newNodes);
     onNodesGenerated(newNodes);
     // eslint-disable-next-line

@@ -17,7 +17,6 @@ const App = () => {
     <div className='App'>
       <h1>Порівняння алгоритмів</h1>
       <NodesGenerator onNodesGenerated={handleNodesGenerated} />
-      {/* <p>{`${nodes}`}</p> */}
       <AntCanvas nodes={nodes} />
       <GeneCanvas nodes={nodes} />
       <PSOCanvas nodes={nodes} />

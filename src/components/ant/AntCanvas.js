@@ -47,7 +47,6 @@ const AntCanvas = ({ nodes }) => {
       instance.setClearAll();
       nodes.forEach((node) => instance.addNode([node]));
     }
-    // instance.setAntSpeed(20);
 
     window.addEventListener('resize', updateCanvasSize);
     return () => window.removeEventListener('resize', updateCanvasSize);
