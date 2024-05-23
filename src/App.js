@@ -4,7 +4,8 @@ import './App.css';
 import NodesGenerator from './components/NodesGenerator';
 import AntCanvas from './components/ant/AntCanvas';
 import GeneCanvas from './components/gene/GeneCanvas';
-import PSOCanvas from './components/pso/PSOCanvas';
+// import PSOCanvas from './components/pso/PSOCanvas';
+import AnnealingCanvas from './components/anneal/AnnealingCanvas';
 
 const App = () => {
   const [nodes, setNodes] = useState([]);
@@ -19,7 +20,8 @@ const App = () => {
       <NodesGenerator onNodesGenerated={handleNodesGenerated} />
       <AntCanvas nodes={nodes} />
       <GeneCanvas nodes={nodes} />
-      <PSOCanvas nodes={nodes} />
+      {/* <PSOCanvas nodes={nodes} /> */}
+      <AnnealingCanvas nodes={nodes} />
     </div>
   );
 };
