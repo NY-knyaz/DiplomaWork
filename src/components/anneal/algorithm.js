@@ -1,3 +1,5 @@
+import calculateDistance from '../../utils/utils';
+
 function calculateTotalDistance(route, nodes) {
   let totalDistance = 0;
   for (let i = 0; i < route.length - 1; i++) {
@@ -8,10 +10,6 @@ function calculateTotalDistance(route, nodes) {
     nodes[route[0]]
   );
   return totalDistance;
-}
-
-function calculateDistance(nodeA, nodeB) {
-  return Math.sqrt((nodeB.x - nodeA.x) ** 2 + (nodeB.y - nodeA.y) ** 2);
 }
 
 function swap(route, i, j) {
