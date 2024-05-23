@@ -105,13 +105,7 @@ const AntCanvas = ({ nodes }) => {
         />
       </div>
       {nodes.length ? (
-        <ControlsPanel
-          onPlayClick={onPlayClick}
-          onStopClick={onStopClick}
-          distances={distances}
-          generations={generations}
-          isPlaying={isPlaying}
-        />
+        <ControlsPanel distances={distances} generations={generations} />
       ) : null}
     </div>
   );
