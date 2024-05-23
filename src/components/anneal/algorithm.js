@@ -11,9 +11,7 @@ function calculateTotalDistance(route, nodes) {
 }
 
 function calculateDistance(nodeA, nodeB) {
-  return Math.sqrt(
-    Math.pow(nodeB.x - nodeA.x, 2) + Math.pow(nodeB.y - nodeA.y, 2)
-  );
+  return Math.sqrt((nodeB.x - nodeA.x) ** 2 + (nodeB.y - nodeA.y) ** 2);
 }
 
 function swap(route, i, j) {
@@ -58,7 +56,7 @@ function simulatedAnnealing(
 
     if (generation % 10 === 0) {
       console.log(
-        `Покоління ${generation}, найкраща відстань: ${Math.max(
+        `Покоління ${generation}, найкраща відстань: ${Math.min(
           ...distanceHistory
         )}`
       );
