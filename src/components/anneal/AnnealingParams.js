@@ -19,6 +19,7 @@ const AnnealingParams = ({
           value={initialTemperature}
           onChange={(e) => setInitialTemperature(Number(e.target.value))}
           placeholder='Введіть початкову температуру'
+          title='Визначає з якою температурою алгоритм починає. Вища початкова температура дозволяє алгоритму приймати гірші рішення на початку, щоб уникнути локальних мінімумів'
         />
       </label>
       <label>
@@ -28,6 +29,7 @@ const AnnealingParams = ({
           value={coolingRate}
           onChange={(e) => setCoolingRate(Number(e.target.value))}
           placeholder='Введіть коефіцієнт охолодження'
+          title='Це число між 0 і 1, яке визначає, наскільки швидко знижуватиметься температура. Нижчий коефіцієнт охолодження призведе до повільнішого охолодження, що дає алгоритму більше часу для пошуку оптимального рішення.'
           step='0.01'
         />
       </label>
@@ -38,6 +40,7 @@ const AnnealingParams = ({
           value={minTemperature}
           onChange={(e) => setMinTemperature(Number(e.target.value))}
           placeholder='Введіть мінімальну температуру'
+          title='Задає нижню межу температури, при якій алгоритм зупиниться. Це запобігає занадто тривалому виконанню алгоритму.'
           step='0.01'
         />
       </label>
@@ -48,6 +51,7 @@ const AnnealingParams = ({
           value={iterationsPerTemperature}
           onChange={(e) => setIterationsPerTemperature(Number(e.target.value))}
           placeholder='Введіть кількість ітерацій на температуру'
+          title='Кількість спроб зміни рішення, яке виконується на кожному кроці температури. Збільшення цього числа може підвищити якість кінцевого рішення.'
         />
       </label>
     </div>

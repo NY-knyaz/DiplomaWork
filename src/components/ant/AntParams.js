@@ -11,7 +11,7 @@ const AntParams = ({
   return (
     <div className='ant-params'>
       <label>
-        &alpha; Вплив феромону
+        Вплив феромону
         <input
           type='number'
           title='Відносний вплив феромону'

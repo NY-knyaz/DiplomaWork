@@ -83,10 +83,10 @@ const GeneCanvas = ({ nodes }) => {
       route.forEach((node, index) => {
         canvasInstance.addNode([node]);
         if (index < route.length - 1) {
-          canvasInstance.drawGABestRoute(node, route[index + 1]);
+          canvasInstance.drawBestRoute(node, route[index + 1]);
         }
       });
-      canvasInstance.drawGABestRoute(route[route.length - 1], route[0]);
+      canvasInstance.drawBestRoute(route[route.length - 1], route[0]);
     }
   }, [route, canvasInstance]);
 
