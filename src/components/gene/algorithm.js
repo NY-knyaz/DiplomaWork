@@ -1,24 +1,24 @@
-function calculateDistance(cityA, cityB) {
-  return Math.sqrt((cityB.x - cityA.x) ** 2 + (cityB.y - cityA.y) ** 2);
+function calculateDistance(nodeA, nodeB) {
+  return Math.sqrt((nodeB.x - nodeA.x) ** 2 + (nodeB.y - nodeA.y) ** 2);
 }
 
-function totalDistance(cities) {
+function totalDistance(nodes) {
   let total = 0;
-  for (let i = 0; i < cities.length - 1; i++) {
-    total += calculateDistance(cities[i], cities[i + 1]);
+  for (let i = 0; i < nodes.length - 1; i++) {
+    total += calculateDistance(nodes[i], nodes[i + 1]);
   }
-  total += calculateDistance(cities[cities.length - 1], cities[0]);
+  total += calculateDistance(nodes[nodes.length - 1], nodes[0]);
   return total;
 }
 
 // Функція для генерації початкової популяції маршрутів
-function generateInitialPopulation(cities, populationSize) {
+function generateInitialPopulation(nodes, populationSize) {
   const population = [];
   for (let i = 0; i < populationSize; i++) {
-    const shuffledCities = [...cities].sort(() => Math.random() - 0.5);
+    const shuffledNodes = [...nodes].sort(() => Math.random() - 0.5);
     population.push({
-      route: shuffledCities,
-      distance: totalDistance(shuffledCities),
+      route: shuffledNodes,
+      distance: totalDistance(shuffledNodes),
     });
   }
   return population;
@@ -49,9 +49,9 @@ function crossover(parent1, parent2, length, crossoverRate) {
 }
 
 function fillChild(child, parent) {
-  parent.forEach((city) => {
-    if (!child.has(city)) {
-      child.add(city);
+  parent.forEach((node) => {
+    if (!child.has(node)) {
+      child.add(node);
     }
   });
 }
@@ -69,12 +69,12 @@ function mutate(route, mutationRate) {
 function catastrophicReset(population, keepNum) {
   const newPopulation = population.slice(0, keepNum);
   while (newPopulation.length < population.length) {
-    const shuffledCities = [...population[0].route].sort(
+    const shuffledNodes = [...population[0].route].sort(
       () => Math.random() - 0.5
     );
     newPopulation.push({
-      route: shuffledCities,
-      distance: totalDistance(shuffledCities),
+      route: shuffledNodes,
+      distance: totalDistance(shuffledNodes),
     });
   }
   return newPopulation;
@@ -82,7 +82,7 @@ function catastrophicReset(population, keepNum) {
 
 // Генетичний алгоритм
 function geneticAlgorithm(
-  cities,
+  nodes,
   populationSize,
   tournamentSize,
   mutationRate,
@@ -90,7 +90,7 @@ function geneticAlgorithm(
   target,
   maxGenerations
 ) {
-  let population = generateInitialPopulation(cities, populationSize);
+  let population = generateInitialPopulation(nodes, populationSize);
   let generation = 0;
   let distanceHistory = [];
 
@@ -109,7 +109,7 @@ function geneticAlgorithm(
       let [child1, child2] = crossover(
         parent1.route,
         parent2.route,
-        cities.length,
+        nodes.length,
         crossoverRate
       );
 
