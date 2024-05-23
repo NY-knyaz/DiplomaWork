@@ -1,5 +1,5 @@
 import React from 'react';
-import './ant/CanvasComponent.css';
+import './CanvasComponent.css';
 
 const RandomNodesButton = ({ generateNodes, disabled, text }) => {
   return (

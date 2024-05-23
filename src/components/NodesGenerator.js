@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import RandomButton from './RandomButton';
-import './ant/CanvasComponent.css';
+import './CanvasComponent.css';
 
 const NodeGenerator = ({ onNodesGenerated }) => {
   const [nodes, setNodes] = useState([]);

@@ -5,7 +5,7 @@ import PlayButton from './PlayButton';
 import StopButton from './StopButton';
 import ControlsPanel from './ControlsPanel.js';
 import { HiOutlineBugAnt } from 'react-icons/hi2';
-import './CanvasComponent.css';
+import '../CanvasComponent.css';
 
 const AntCanvas = ({ nodes }) => {
   const canvasId = 'antCanvas';

@@ -5,7 +5,7 @@ import CalculateButton from '../gene/CalculateButton';
 import runPSO from './algorithm';
 import Canvas from '../../aco/canvas';
 import PSOParams from './PSOParams';
-import '../ant/CanvasComponent.css';
+import '../CanvasComponent.css';
 
 const PSOCanvas = ({ nodes }) => {
   const canvasId = 'psoCanvas';

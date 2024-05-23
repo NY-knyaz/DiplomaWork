@@ -5,7 +5,7 @@ import CalculateButton from './CalculateButton';
 import geneticAlgorithm from './algorithm';
 import GeneParams from './GeneParams';
 import Canvas from '../../aco/canvas';
-import '../ant/CanvasComponent.css';
+import '../CanvasComponent.css';
 
 const GeneCanvas = ({ nodes }) => {
   const canvasId = 'geneCanvas';

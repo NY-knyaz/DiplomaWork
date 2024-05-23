@@ -1,5 +1,5 @@
 import React from 'react';
-import '../ant/CanvasComponent.css';
+import '../CanvasComponent.css';
 
 const CalculateButton = ({ onPlayClick, disabled }) => {
   return (
