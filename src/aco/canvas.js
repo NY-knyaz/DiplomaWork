@@ -46,20 +46,7 @@ class Canvas extends fabric.Canvas {
     this.aco = new AntSystem(this.environment);
 
     this.setAddNode();
-
-    // this.on('mouse:wheel', (event) => this.onMoveWheel(event));
   }
-
-  // onMoveWheel(opt) {
-  //   var delta = opt.e.deltaY;
-  //   var zoom = this.getZoom();
-  //   zoom *= 0.999 ** delta;
-  //   if (zoom > 20) zoom = 20;
-  //   if (zoom < 0.01) zoom = 0.01;
-  //   this.zoomToPoint({ x: opt.e.offsetX, y: opt.e.offsetY }, zoom);
-  //   opt.e.preventDefault();
-  //   opt.e.stopPropagation();
-  // }
 
   resize(width, height) {
     this.setDimensions({ width: width, height: height });
@@ -108,7 +95,7 @@ class Canvas extends fabric.Canvas {
     this.renderAll();
   }
 
-  drawGABestRoute(fromNode, toNode) {
+  drawBestRoute(fromNode, toNode) {
     const line = FabricjsUtils.makeGABestRoute(
       fromNode.x,
       fromNode.y,
@@ -203,47 +190,11 @@ class Canvas extends fabric.Canvas {
     }
   }
 
-  // TODO: delete
-  // setACO(aco) {
-  //   if (aco == 'as') {
-  //     this.aco = new AntSystem(this.environment);
-  //   } else if (aco == 'acs') {
-  //     this.aco = new AntColonySystem(this.environment);
-  //   }
-  // }
-
   setAddNode() {
     this.defaultCursor = 'crosshair';
     this.selectedOption = OPTIONS.ADD_NODE;
     this.lockCanvas(true);
   }
-
-  // TODO: delete setMoveNode
-  // setMoveNode() {
-  //   this.defaultCursor = 'default';
-  //   this.selectedOption = OPTIONS.MOVE_NODE;
-  //   this.lockCanvas(false);
-  // }
-
-  // TODO: delete removeNode
-  //   removeNode(ant) {
-
-  //     this.remove(ant);
-  //     this.remove(ant.currentNode);
-
-  //     this.ants = this.ants.filter((n, i) => i !== this.ants.indexOf(ant));
-  //     this.nodes = this.nodes.filter((n, i) => i !== this.nodes.indexOf(ant.currentNode));
-
-  //     this.upateCnn();
-  // }
-
-  // TODO: delete removeSelectedNodes
-  // removeSelectedNodes() {
-  //   this.getActiveObjects().forEach((node) => {
-  //     this.removeNode(node);
-  //   });
-  //   this.discardActiveObject().renderAll();
-  // }
 
   setAntSpeed(value) {
     this.antSpeed = value;
@@ -323,7 +274,6 @@ class Canvas extends fabric.Canvas {
       if (isMoveDone) {
         if (that.environment.isGenerationDone()) {
           that.updateGeneration();
-          // console.log(that.environment.bestTourDistance);
         }
 
         if (that.isPlay) {
