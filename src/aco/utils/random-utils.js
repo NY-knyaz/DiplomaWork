@@ -12,6 +12,7 @@ class RandomUtils {
     return RandomUtils.chance.floating({ min: min, max: max, fixed: fixed });
   }
 
+  //TODO Delete
   static nextNodes(numberOfNodes, width, height) {
     let nodes = [];
 

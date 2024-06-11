@@ -50,6 +50,7 @@ class ACO {
     return this.environment.findNodeById(nextNodeId);
   }
 
+  //TODO Delete
   getT0() {
     throw new Error("Method 'getT0' must be implemented.");
   }

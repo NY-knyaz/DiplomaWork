@@ -80,6 +80,7 @@ class FabricjsUtils {
     });
   }
 
+  //TODO Delete
   static makeRect(x, y, color = 'red') {
     return new fabric.Rect({
       width: 60,

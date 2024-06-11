@@ -137,14 +137,14 @@ function geneticAlgorithm(
 
     if (population[0].distance < target) {
       console.log(
-        `Solution found at generation ${generation} with distance ${population[0].distance}`
+        `Вирішення знайдено на поколіннні ${generation} з відстанню ${population[0].distance}`
       );
       break;
     }
 
     if (generation % 10 === 0) {
       console.log(
-        `Generation ${generation}, best distance: ${population[0].distance}`
+        `Покоління ${generation}, найкраща відстань: ${population[0].distance}`
       );
     }
   }

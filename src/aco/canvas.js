@@ -1,7 +1,7 @@
-import Environment from './model/environment';
+import Environment from './model/environment'; //
 import FabricjsUtils from './utils/fabricjs-utils';
-import AntSystem from './ant-system';
-import aco from './model/ant';
+import AntSystem from './ant-system'; //
+import aco from './model/ant'; //
 
 import { fabric, canvas } from 'fabric';
 
@@ -221,9 +221,7 @@ class Canvas extends fabric.Canvas {
     if (this.isPlay) {
       return;
     }
-    console.log(this.environment.alpha);
-    console.log(this.environment.beta);
-    console.log(this.environment.rho);
+
     if (this.environment.getNumberOfNodes() <= 1) {
       throw new Error('You need at least 2 nodes to play');
     }

@@ -46,7 +46,7 @@ const Chart = ({ distances, generations, title }) => {
 
   const chartSeries = [
     {
-      name: 'Best Tour Distance',
+      name: 'Найкраща відстань',
       data: distances.map((dist) => dist.toFixed()),
     },
   ];

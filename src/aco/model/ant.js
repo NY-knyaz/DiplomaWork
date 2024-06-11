@@ -121,20 +121,4 @@ class Node extends fabric.Group {
 
 aco.Node = Node;
 
-class Aisle extends fabric.Group {
-  constructor(x, y, description) {
-    super([], {
-      selectable: false,
-      evented: false,
-      layer: FabricjsUtils.LAYER.NODE,
-      ...FabricjsUtils.getDefaultSettings(),
-    });
-
-    this.addWithUpdate(FabricjsUtils.makeRect(x, y, 'green'));
-    this.addWithUpdate(FabricjsUtils.makeText(x, y, description));
-  }
-}
-
-aco.Aisle = Aisle;
-
 export default aco;
